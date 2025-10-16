@@ -1,17 +1,12 @@
 "use client";
 
 import Autoplay from "embla-carousel-autoplay";
-import type { LucideIcon } from "lucide-react";
 import {
   ArrowUpRight,
   Building2,
   Calendar,
   Globe,
-  GraduationCap,
-  Heart,
-  ShoppingCart,
   Smartphone,
-  Users,
 } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -40,158 +35,53 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
-// Type definition for project
-type Project = {
-  id: number;
-  title: string;
-  category: "web" | "mobile";
-  description: string;
-  image: string;
-  tags: string[];
-  icon: LucideIcon;
-  iconLabel: string;
-  year: string;
-  client: string;
-  link: string;
-};
-
-// Data projects dengan dummy images dari Unsplash
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "Website Universitas ABC",
-    category: "web",
-    description:
-      "Redesign website kampus dengan sistem informasi akademik terintegrasi dan portal mahasiswa modern.",
-    image:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
-    tags: ["Next.js", "TypeScript", "PostgreSQL"],
-    icon: GraduationCap,
-    iconLabel: "Education Project",
-    year: "2024",
-    client: "Universitas ABC",
-    link: "#",
-  },
-  {
-    id: 2,
-    title: "Aplikasi E-Commerce Fashion",
-    category: "mobile",
-    description:
-      "Aplikasi mobile e-commerce dengan fitur AR try-on, payment gateway, dan real-time tracking.",
-    image:
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
-    tags: ["React Native", "Node.js", "MongoDB"],
-    icon: ShoppingCart,
-    iconLabel: "E-Commerce Project",
-    year: "2024",
-    client: "FashionHub Indonesia",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "Sistem Manajemen Rumah Sakit",
-    category: "web",
-    description:
-      "Platform terintegrasi untuk manajemen pasien, appointment, rekam medis elektronik, dan billing.",
-    image:
-      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop",
-    tags: ["Vue.js", "Laravel", "MySQL"],
-    icon: Heart,
-    iconLabel: "Healthcare Project",
-    year: "2023",
-    client: "RS Sehat Sentosa",
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "Corporate Website & CMS",
-    category: "web",
-    description:
-      "Website korporat multi-bahasa dengan CMS custom untuk manajemen konten dan blog.",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
-    tags: ["Next.js", "Strapi", "TailwindCSS"],
-    icon: Building2,
-    iconLabel: "Corporate Project",
-    year: "2024",
-    client: "PT Maju Jaya",
-    link: "#",
-  },
-  {
-    id: 5,
-    title: "Aplikasi Marketplace B2B",
-    category: "mobile",
-    description:
-      "Platform B2B marketplace dengan fitur tender, quotation, dan supply chain management.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-    tags: ["Flutter", "Firebase", "REST API"],
-    icon: Users,
-    iconLabel: "B2B Marketplace Project",
-    year: "2023",
-    client: "TradeConnect",
-    link: "#",
-  },
-  {
-    id: 6,
-    title: "Landing Page SaaS Product",
-    category: "web",
-    description:
-      "Landing page modern untuk SaaS product dengan animasi interaktif dan conversion optimization.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    tags: ["React", "Framer Motion", "Vercel"],
-    icon: Globe,
-    iconLabel: "SaaS Landing Page Project",
-    year: "2024",
-    client: "CloudSync",
-    link: "#",
-  },
-];
+import type { Project } from "@/types";
+import { projects } from "@/data/data";
 
 export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative py-20 px-6 overflow-hidden bg-white"
+      className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white"
     >
-      {/* Background decorative elements */}
-      <div className="absolute top-20 left-0 w-72 h-72 bg-[#21b6fc]/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-0 w-96 h-96 bg-[#1e94d2]/5 rounded-full blur-3xl" />
+      {/* Background decorative elements - responsif */}
+      <div className="absolute top-10 sm:top-20 left-0 w-48 h-48 sm:w-72 sm:h-72 bg-[#21b6fc]/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 sm:bottom-20 right-0 w-56 h-56 sm:w-96 sm:h-96 bg-[#1e94d2]/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#00334e] mb-4">
+        <div className="text-center mb-8 sm:mb-10 lg:mb-12 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#00334e] mb-3 sm:mb-4 px-4">
             Portofolio Kami
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#21b6fc] to-[#1e94d2] mx-auto mb-6" />
-          <p className="text-lg md:text-xl text-[#126088] max-w-3xl mx-auto">
+          <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-[#21b6fc] to-[#1e94d2] mx-auto mb-4 sm:mb-6" />
+          <p className="text-base sm:text-lg lg:text-xl text-[#126088] max-w-3xl mx-auto px-4">
             Beberapa project yang telah kami kerjakan dengan dedikasi dan
             profesionalitas tinggi
           </p>
         </div>
 
         {/* Tabs Filter */}
-        <Tabs defaultValue="all" className="w-full mb-8">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-12">
-            <TabsTrigger value="all" className="text-sm">
-              Semua Project
+        <Tabs defaultValue="all" className="w-full mb-6 sm:mb-8">
+          <TabsList className="grid w-full max-w-xs sm:max-w-md mx-auto grid-cols-3 mb-8 sm:mb-10 lg:mb-12">
+            <TabsTrigger value="all" className="text-xs sm:text-sm px-2">
+              Semua
             </TabsTrigger>
-            <TabsTrigger value="web" className="text-sm">
+            <TabsTrigger value="web" className="text-xs sm:text-sm px-2">
               <Globe
-                className="w-3.5 h-3.5 mr-1.5"
+                className="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1 sm:mr-1.5"
                 aria-label="Website Projects"
               />
-              Website
+              <span className="hidden sm:inline">Website</span>
+              <span className="sm:hidden">Web</span>
             </TabsTrigger>
-            <TabsTrigger value="mobile" className="text-sm">
+            <TabsTrigger value="mobile" className="text-xs sm:text-sm px-2">
               <Smartphone
-                className="w-3.5 h-3.5 mr-1.5"
+                className="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1 sm:mr-1.5"
                 aria-label="Mobile App Projects"
               />
-              Mobile App
+              <span className="hidden sm:inline">Mobile App</span>
+              <span className="sm:hidden">Mobile</span>
             </TabsTrigger>
           </TabsList>
 
@@ -216,13 +106,13 @@ export function ProjectsSection() {
         </Tabs>
 
         {/* CTA Button */}
-        <div className="text-center mt-12 animate-fade-in-up">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-[#21b6fc] to-[#1e94d2] hover:from-[#1e94d2] hover:to-[#21b6fc] text-white px-8 py-6 text-base shadow-lg"
-          >
+        <div className="text-center mt-8 sm:mt-10 lg:mt-12 animate-fade-in-up">
+          <Button className="bg-gradient-to-r from-[#21b6fc] to-[#1e94d2] hover:from-[#1e94d2] hover:to-[#21b6fc] text-white text-sm sm:text-base shadow-lg w-full sm:w-auto">
             Lihat Semua Project
-            <ArrowUpRight className="w-4 h-4 ml-2" aria-label="External link" />
+            <ArrowUpRight
+              className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-2"
+              aria-label="External link"
+            />
           </Button>
         </div>
       </div>
@@ -276,8 +166,8 @@ function ProjectCarousel({ projects }: { projects: Project[] }) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-0 -translate-x-12 bg-white/95 backdrop-blur-sm border-[#C1EBF7] hover:bg-[#E6F7FB] hover:border-[#21b6fc] shadow-lg" />
-        <CarouselNext className="right-0 translate-x-12 bg-white/95 backdrop-blur-sm border-[#C1EBF7] hover:bg-[#E6F7FB] hover:border-[#21b6fc] shadow-lg" />
+        <CarouselPrevious className="left-0 -translate-x-12 bg-white/95 backdrop-blur-sm border-[#C1EBF7] hover:bg-[#9fa7a9] hover:border-[#21b6fc] shadow-lg" />
+        <CarouselNext className="right-0 translate-x-12 bg-white/95 backdrop-blur-sm border-[#C1EBF7] hover:bg-[#9fa7a9] hover:border-[#21b6fc] shadow-lg" />
       </Carousel>
 
       {/* Dot Indicators */}

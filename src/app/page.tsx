@@ -1,19 +1,18 @@
-import { AboutSection } from "@/components/about-us";
-import { Footer } from "@/components/footer";
-import { HeroSection } from "@/components/hero";
-import { Navbar } from "@/components/navbar";
-import { ProjectsSection } from "@/components/project";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { AboutSection } from "@/components/sections/about-us";
+import { Footer } from "@/components/layouts/footer";
+import { HeroSection } from "@/components/sections/hero";
+import { Navbar } from "@/components/layouts/navbar";
+import { ProjectsSection } from "@/components/sections/project";
 
 export default function Home() {
   return (
-    <div className="font-sans items-center justify-center min-h-screen">
+    <div className="font-sans min-h-screen">
       <Navbar />
-      <ScrollArea>
+      <main>
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
-      </ScrollArea>
+      </main>
       <Footer />
     </div>
   );
