@@ -26,40 +26,42 @@ export function Footer() {
 
   return (
     <footer className="relative bg-gradient-to-br from-[#00334e] to-[#001f2e] text-white overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#21b6fc]/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#1e94d2]/10 rounded-full blur-3xl"></div>
+      {/* Decorative elements - responsif */}
+      <div className="absolute top-0 right-0 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-[#21b6fc]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-40 h-40 sm:w-56 sm:h-56 lg:w-72 lg:h-72 bg-[#1e94d2]/10 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 py-16 border-b border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-6 py-10 sm:py-12 lg:py-16 border-b border-white/10">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center">
+            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
                 <Image
-                  src="/pic.jpeg" // Ganti dengan logo Anda
+                  src="/pic.jpeg"
                   alt="Partner in Code Logo"
                   width={32}
                   height={32}
-                  className="object-contain rounded-sm"
+                  className="object-contain rounded-sm w-6 h-6 sm:w-8 sm:h-8"
                 />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">
+                <h3 className="text-lg sm:text-xl font-bold text-white">
                   Partner in Code
                 </h3>
-                <p className="text-xs text-[#C1EBF7]">Your Tech Partner</p>
+                <p className="text-[10px] sm:text-xs text-[#C1EBF7]">
+                  Your Tech Partner
+                </p>
               </div>
             </div>
-            <p className="text-sm text-[#C1EBF7] leading-relaxed mb-6">
+            <p className="text-xs sm:text-sm text-[#C1EBF7] leading-relaxed mb-4 sm:mb-6">
               Solusi teknologi inovatif untuk mengembangkan bisnis Anda di era
               digital. Bersama kami, wujudkan transformasi digital yang
               berkelanjutan.
             </p>
 
             {/* Social Media */}
-            <div className="flex gap-3">
+            <div className="flex gap-2 sm:gap-3">
               <TooltipProvider delayDuration={200}>
                 <Tooltip>
                   <TooltipTrigger asChild>
@@ -67,14 +69,14 @@ export function Footer() {
                       href="https://facebook.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 bg-white/10 hover:bg-[#21b6fc] rounded-lg flex items-center justify-center transition-colors group"
+                      className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 hover:bg-[#21b6fc] rounded-lg flex items-center justify-center transition-colors group"
                       aria-label="Facebook"
                     >
-                      <Facebook className="w-4 h-4 text-[#C1EBF7] group-hover:text-white" />
+                      <Facebook className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C1EBF7] group-hover:text-white" />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Follow us on Facebook</p>
+                    <p className="text-xs sm:text-sm">Follow us on Facebook</p>
                   </TooltipContent>
                 </Tooltip>
 
@@ -84,14 +86,14 @@ export function Footer() {
                       href="https://instagram.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 bg-white/10 hover:bg-[#21b6fc] rounded-lg flex items-center justify-center transition-colors group"
+                      className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 hover:bg-[#21b6fc] rounded-lg flex items-center justify-center transition-colors group"
                       aria-label="Instagram"
                     >
-                      <Instagram className="w-4 h-4 text-[#C1EBF7] group-hover:text-white" />
+                      <Instagram className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C1EBF7] group-hover:text-white" />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Follow us on Instagram</p>
+                    <p className="text-xs sm:text-sm">Follow us on Instagram</p>
                   </TooltipContent>
                 </Tooltip>
 
@@ -101,14 +103,14 @@ export function Footer() {
                       href="https://linkedin.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 bg-white/10 hover:bg-[#21b6fc] rounded-lg flex items-center justify-center transition-colors group"
+                      className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 hover:bg-[#21b6fc] rounded-lg flex items-center justify-center transition-colors group"
                       aria-label="LinkedIn"
                     >
-                      <Linkedin className="w-4 h-4 text-[#C1EBF7] group-hover:text-white" />
+                      <Linkedin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C1EBF7] group-hover:text-white" />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Connect on LinkedIn</p>
+                    <p className="text-xs sm:text-sm">Connect on LinkedIn</p>
                   </TooltipContent>
                 </Tooltip>
 
@@ -118,14 +120,14 @@ export function Footer() {
                       href="https://twitter.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 bg-white/10 hover:bg-[#21b6fc] rounded-lg flex items-center justify-center transition-colors group"
+                      className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 hover:bg-[#21b6fc] rounded-lg flex items-center justify-center transition-colors group"
                       aria-label="Twitter"
                     >
-                      <Twitter className="w-4 h-4 text-[#C1EBF7] group-hover:text-white" />
+                      <Twitter className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C1EBF7] group-hover:text-white" />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Follow us on Twitter</p>
+                    <p className="text-xs sm:text-sm">Follow us on Twitter</p>
                   </TooltipContent>
                 </Tooltip>
 
@@ -135,14 +137,14 @@ export function Footer() {
                       href="https://github.com/fadhly-gitsekarang"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 bg-white/10 hover:bg-[#21b6fc] rounded-lg flex items-center justify-center transition-colors group"
+                      className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 hover:bg-[#21b6fc] rounded-lg flex items-center justify-center transition-colors group"
                       aria-label="GitHub"
                     >
-                      <Github className="w-4 h-4 text-[#C1EBF7] group-hover:text-white" />
+                      <Github className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C1EBF7] group-hover:text-white" />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Check our GitHub</p>
+                    <p className="text-xs sm:text-sm">Check our GitHub</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -151,15 +153,17 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-base sm:text-lg font-bold text-white mb-4 sm:mb-6">
+              Quick Links
+            </h4>
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <Link
                   href="/"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
                 >
                   <ArrowUpRight
-                    className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-0 group-hover:opacity-100 transition-opacity"
                     aria-hidden="true"
                   />
                   Beranda
@@ -168,10 +172,10 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
                 >
                   <ArrowUpRight
-                    className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-0 group-hover:opacity-100 transition-opacity"
                     aria-hidden="true"
                   />
                   Tentang Kami
@@ -180,10 +184,10 @@ export function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
                 >
                   <ArrowUpRight
-                    className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-0 group-hover:opacity-100 transition-opacity"
                     aria-hidden="true"
                   />
                   Layanan
@@ -192,10 +196,10 @@ export function Footer() {
               <li>
                 <Link
                   href="/projects"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
                 >
                   <ArrowUpRight
-                    className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-0 group-hover:opacity-100 transition-opacity"
                     aria-hidden="true"
                   />
                   Portofolio
@@ -204,10 +208,10 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
                 >
                   <ArrowUpRight
-                    className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-0 group-hover:opacity-100 transition-opacity"
                     aria-hidden="true"
                   />
                   Kontak
@@ -218,15 +222,17 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-bold text-white mb-6">Layanan Kami</h4>
-            <ul className="space-y-3">
+            <h4 className="text-base sm:text-lg font-bold text-white mb-4 sm:mb-6">
+              Layanan Kami
+            </h4>
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <Link
                   href="/services/web"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
                 >
                   <ArrowUpRight
-                    className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-0 group-hover:opacity-100 transition-opacity"
                     aria-hidden="true"
                   />
                   Pengembangan Website
@@ -235,10 +241,10 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/mobile"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
                 >
                   <ArrowUpRight
-                    className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-0 group-hover:opacity-100 transition-opacity"
                     aria-hidden="true"
                   />
                   Aplikasi Mobile
@@ -247,10 +253,10 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/ui-ux"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
                 >
                   <ArrowUpRight
-                    className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-0 group-hover:opacity-100 transition-opacity"
                     aria-hidden="true"
                   />
                   UI/UX Design
@@ -259,10 +265,10 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/integration"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
                 >
                   <ArrowUpRight
-                    className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-0 group-hover:opacity-100 transition-opacity"
                     aria-hidden="true"
                   />
                   Integrasi Sistem
@@ -271,10 +277,10 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/consulting"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-center gap-2 group"
                 >
                   <ArrowUpRight
-                    className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-0 group-hover:opacity-100 transition-opacity"
                     aria-hidden="true"
                   />
                   IT Consulting
@@ -285,44 +291,46 @@ export function Footer() {
 
           {/* Contact & Newsletter */}
           <div>
-            <h4 className="text-lg font-bold text-white mb-6">Hubungi Kami</h4>
-            <ul className="space-y-4 mb-6">
+            <h4 className="text-base sm:text-lg font-bold text-white mb-4 sm:mb-6">
+              Hubungi Kami
+            </h4>
+            <ul className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
               <li>
                 <a
                   href="mailto:info@partnerincode.com"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-start gap-3 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-start gap-2 sm:gap-3 group"
                 >
                   <TooltipProvider delayDuration={200}>
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <Mail
-                          className="w-4 h-4 mt-0.5 flex-shrink-0"
+                          className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 flex-shrink-0"
                           aria-label="Email address"
                         />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Send us an email</p>
+                        <p className="text-xs sm:text-sm">Send us an email</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                  <span>info@partnerincode.com</span>
+                  <span className="break-all">info@partnerincode.com</span>
                 </a>
               </li>
               <li>
                 <a
                   href="tel:+628123456789"
-                  className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-start gap-3 group"
+                  className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors flex items-start gap-2 sm:gap-3 group"
                 >
                   <TooltipProvider delayDuration={200}>
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <Phone
-                          className="w-4 h-4 mt-0.5 flex-shrink-0"
+                          className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 flex-shrink-0"
                           aria-label="Phone number"
                         />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Call us</p>
+                        <p className="text-xs sm:text-sm">Call us</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -330,17 +338,17 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <div className="text-sm text-[#C1EBF7] flex items-start gap-3">
+                <div className="text-xs sm:text-sm text-[#C1EBF7] flex items-start gap-2 sm:gap-3">
                   <TooltipProvider delayDuration={200}>
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <MapPin
-                          className="w-4 h-4 mt-0.5 flex-shrink-0"
+                          className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 flex-shrink-0"
                           aria-label="Office location"
                         />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Our office</p>
+                        <p className="text-xs sm:text-sm">Our office</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -352,65 +360,32 @@ export function Footer() {
             </ul>
 
             {/* Newsletter */}
-            <div>
-              <h5 className="text-sm font-semibold text-white mb-3">
-                Newsletter
-              </h5>
-              <p className="text-xs text-[#C1EBF7] mb-3">
-                Dapatkan update terbaru dari kami
-              </p>
-              <form className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Email Anda"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-[#C1EBF7]/60 focus:border-[#21b6fc] h-9 text-sm"
-                  aria-label="Email for newsletter"
-                />
-                <TooltipProvider delayDuration={200}>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Button
-                        type="submit"
-                        size="icon"
-                        className="bg-gradient-to-r from-[#21b6fc] to-[#1e94d2] hover:from-[#1e94d2] hover:to-[#21b6fc] h-9 w-9 flex-shrink-0"
-                        aria-label="Subscribe to newsletter"
-                      >
-                        <Send className="w-4 h-4" />
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>Subscribe</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              </form>
-            </div>
           </div>
         </div>
 
         {/* Bottom Footer */}
-        <div className="px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-[#C1EBF7] text-center md:text-left">
+        <div className="px-4 sm:px-6 py-4 sm:py-6 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+          <p className="text-xs sm:text-sm text-[#C1EBF7] text-center md:text-left">
             © {currentYear}{" "}
             <span className="font-semibold text-white">Partner in Code</span>.
             All rights reserved.
           </p>
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <Link
               href="/privacy"
-              className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors"
+              className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors"
+              className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors"
             >
               Terms of Service
             </Link>
             <Link
               href="/sitemap"
-              className="text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors"
+              className="text-xs sm:text-sm text-[#C1EBF7] hover:text-[#21b6fc] transition-colors"
             >
               Sitemap
             </Link>
